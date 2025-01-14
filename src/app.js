@@ -7,7 +7,7 @@ import hiAnimeRoutes from './routes/routes.js'
 const app = new Hono()
 
 config()
-const origins = process.env.ORIGIN.split(',')
+const origins = (process.env.ORIGIN || '').split(',')
 console.log(origins)
 
 app.use(
